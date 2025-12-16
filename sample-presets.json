@@ -1,0 +1,22 @@
+{
+  "preset__inquiry": {
+    "name": "お問合せフォーム用",
+    "data": "client[name]=手須　藤太郎\nclient[furigana]=テス　トウタロウ\nclient[email1]=testoutarou@example.com\nclient[email2]=testoutarou@example.com\nclient[tel1]=08012345678\nclient[comment1]=お問合せ のテストです。\npolicy=1",
+    "updatedAt": "2025-01-01T00:00:00.000Z"
+  },
+  "preset__request": {
+    "name": "資料請求フォーム用",
+    "data": "client[name]=手須　藤太郎\nclient[furigana]=テス　トウタロウ\nclient[age]=55\nclient[email1]=testoutarou@example.com\nclient[email2]=testoutarou@example.com\nclient[tel1]=08012345678\nclient[tel2]=08012345678\nclient[postcode]=9800871\nclient[address1]=宮城県\nclient[address2]=仙台市紅葉区杜王町1丁目11-1\nclient[address3]=エメラルドマンション花京院　324号室\nclient[job]=公務員\nclient[income]=500万円～\nclient[media2][]=checkbox:0,3\nclient[comment1]=資料請求 のテストです。\npolicy=1",
+    "updatedAt": "2025-01-01T00:00:00.000Z"
+  },
+  "preset__full": {
+    "name": "来場予約フォーム用",
+    "data": "requirement[date1]=2025年12月23日\nrequirement[time1_h]=11\nrequirement[time1_m]=00\nrequirement[date2]=2025年12月24日\nrequirement[time2_h]=11\nrequirement[time2_m]=00\nclient[name]=手須　藤太郎\nclient[furigana]=テス　トウタロウ\nclient[age]=55\nclient[sex]=radio:0\nclient[email1]=testoutarou@example.com\nclient[email2]=testoutarou@example.com\nclient[tel1]=08012345678\nclient[postcode]=9800871\nclient[address1]=宮城県\nclient[address2]=仙台市紅葉区杜王町浄得寺通り4丁目7-7\nclient[address3]=マンションズレッド　3階　307号室\nclient[marital]=radio:0\nclient[job]=公務員\nclient[income]=700万円～\nclient[media2][]=checkbox:0,3\nclient[comment1]=来場予約 のテストです。\npolicy=1",
+    "updatedAt": "2025-01-01T00:00:00.000Z"
+  },
+  "preset_user2": {
+    "name": "テストユーザー2（女性・未婚）",
+    "data": "requirement[date1]=2025年12月25日\nrequirement[time1_h]=14\nrequirement[time1_m]=30\nclient[name]=手須　斗貴子\nclient[furigana]=テス　トキコ\nclient[age]=28\nclient[sex]=radio:1\nclient[email1]=testokiko@example.com\nclient[email2]=testokiko@example.com\nclient[tel1]=09012345678\nclient[postcode]=9800871\nclient[address1]=宮城県\nclient[address2]=仙台市紅葉区杜王町石振沢44\nclient[address3]=ストーンオーシャンビル　5F\nclient[marital]=radio:1\nclient[job]=会社員\nclient[income]=400万円～\nclient[media2][]=checkbox:1,4\nclient[comment1]=二人目のテストユーザーです。\npolicy=1",
+    "updatedAt": "2025-01-01T00:00:00.000Z"
+  }
+}

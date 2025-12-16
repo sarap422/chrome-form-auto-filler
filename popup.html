@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Auto Filler</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>📝 Form Auto Filler</h1>
+    </header>
+
+    <!-- メイン画面 -->
+    <div id="main-view">
+      <div class="section">
+        <label for="preset-select">入力セット:</label>
+        <select id="preset-select">
+          <option value="">-- 選択してください --</option>
+        </select>
+      </div>
+
+      <div class="button-group">
+        <button id="btn-fill" class="btn btn-primary" disabled>
+          ▶ 入力実行
+        </button>
+      </div>
+
+      <div class="button-group-secondary">
+        <button id="btn-new" class="btn btn-secondary">+ 新規作成</button>
+        <button id="btn-edit" class="btn btn-secondary" disabled>✏️ 編集</button>
+        <button id="btn-delete" class="btn btn-danger" disabled>🗑️ 削除</button>
+      </div>
+
+      <div class="button-group-secondary">
+        <button id="btn-export" class="btn btn-secondary btn-small">📤 エクスポート</button>
+        <button id="btn-import" class="btn btn-secondary btn-small">📥 インポート</button>
+        <input type="file" id="import-file" accept=".json" style="display: none;">
+      </div>
+    </div>
+
+    <!-- 編集画面 -->
+    <div id="edit-view" style="display: none;">
+      <div class="section">
+        <label for="preset-name">セット名:</label>
+        <input type="text" id="preset-name" placeholder="例: テストユーザー1">
+      </div>
+
+      <div class="section">
+        <label>入力データ:</label>
+        <p class="hint">name=value 形式で1行ずつ入力（例: client[name]=手須　藤太郎）</p>
+        <textarea id="preset-data" rows="15" placeholder="client[name]=手須　藤太郎
+client[furigana]=テス　トウタロウ
+client[email1]=test@example.com
+client[email2]=test@example.com
+client[tel1]=08012345678
+client[postcode]=9800871
+client[address1]=宮城県
+client[address2]=仙台市紅葉区杜王町浄禅寺1-6
+client[address3]=テストマンション101号室
+client[job]=会社員
+client[marital]=radio:0
+client[media2][]=checkbox:0,2
+client[comment1]=フォームテストです。
+policy=1"></textarea>
+      </div>
+
+      <div class="help-section">
+        <details>
+          <summary>📖 入力形式について</summary>
+          <div class="help-content">
+            <p><strong>基本形式:</strong> name=value</p>
+            <p><strong>テキスト/select:</strong> client[name]=値</p>
+            <p><strong>radio:</strong> client[marital]=radio:0 (0番目を選択)</p>
+            <p><strong>checkbox:</strong> client[media][]=checkbox:0,2 (0,2番目をチェック)</p>
+            <p><strong>checkbox単体:</strong> policy=1 (チェック) / policy=0 (チェック外す)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="button-group">
+        <button id="btn-save" class="btn btn-primary">💾 保存</button>
+        <button id="btn-cancel" class="btn btn-secondary">キャンセル</button>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <small>Dev Tool v1.0.0</small>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
