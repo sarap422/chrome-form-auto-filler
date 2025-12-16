@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4f46e5"/>
+      <stop offset="100%" style="stop-color:#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <!-- 背景の角丸四角形 -->
+  <rect x="8" y="8" width="112" height="112" rx="20" fill="url(#bg)"/>
+  <!-- フォームアイコン -->
+  <rect x="28" y="32" width="72" height="64" rx="4" fill="white" opacity="0.95"/>
+  <!-- 入力フィールド1 -->
+  <rect x="36" y="42" width="40" height="8" rx="2" fill="#e0e7ff"/>
+  <rect x="36" y="42" width="28" height="8" rx="2" fill="#4f46e5"/>
+  <!-- 入力フィールド2 -->
+  <rect x="36" y="56" width="56" height="8" rx="2" fill="#e0e7ff"/>
+  <rect x="36" y="56" width="42" height="8" rx="2" fill="#4f46e5"/>
+  <!-- 入力フィールド3 -->
+  <rect x="36" y="70" width="48" height="8" rx="2" fill="#e0e7ff"/>
+  <rect x="36" y="70" width="36" height="8" rx="2" fill="#4f46e5"/>
+  <!-- チェックマーク -->
+  <circle cx="90" cy="80" r="16" fill="#22c55e"/>
+  <path d="M82 80 L87 85 L98 74" stroke="white" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

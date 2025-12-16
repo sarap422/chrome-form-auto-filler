@@ -1,0 +1,201 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Sans", "Noto Sans JP", sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #333;
+  background: #f8f9fa;
+  min-width: 360px;
+}
+
+.container {
+  padding: 12px;
+}
+
+.header {
+  text-align: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #dee2e6;
+  margin-bottom: 12px;
+}
+
+.header h1 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #495057;
+}
+
+.section {
+  margin-bottom: 12px;
+}
+
+.section label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: #495057;
+}
+
+.hint {
+  font-size: 11px;
+  color: #6c757d;
+  margin-bottom: 4px;
+}
+
+select,
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 13px;
+  font-family: inherit;
+  background: #fff;
+  transition: border-color 0.15s ease-in-out;
+}
+
+select:focus,
+input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #80bdff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.15);
+}
+
+textarea {
+  font-family: "Monaco", "Consolas", "Courier New", monospace;
+  font-size: 11px;
+  line-height: 1.4;
+  resize: vertical;
+  min-height: 200px;
+}
+
+.button-group {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.button-group-secondary {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: #007bff;
+  color: #fff;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #0056b3;
+}
+
+.btn-secondary {
+  background: #6c757d;
+  color: #fff;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: #545b62;
+}
+
+.btn-danger {
+  background: #dc3545;
+  color: #fff;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background: #c82333;
+}
+
+.btn-small {
+  flex: none;
+  padding: 6px 12px;
+  font-size: 11px;
+}
+
+.help-section {
+  margin-bottom: 12px;
+}
+
+.help-section details {
+  background: #e9ecef;
+  border-radius: 4px;
+  padding: 8px 10px;
+}
+
+.help-section summary {
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  color: #495057;
+}
+
+.help-content {
+  margin-top: 8px;
+  font-size: 11px;
+  color: #6c757d;
+}
+
+.help-content p {
+  margin-bottom: 4px;
+}
+
+.footer {
+  text-align: center;
+  padding-top: 10px;
+  border-top: 1px solid #dee2e6;
+  margin-top: 12px;
+  color: #adb5bd;
+}
+
+/* 成功/エラーメッセージ */
+.message {
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  display: none;
+}
+
+.message.success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  display: block;
+}
+
+.message.error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  display: block;
+}
