@@ -39,15 +39,29 @@ async function loadPresets() {
   const result = await chrome.storage.local.get(['presets']);
   const presets = result.presets || {};
   
-  // セレクトボックスを更新
-  elements.presetSelect.innerHTML = '<option value="">-- 選択してください --</option>';
+  // セレクトボックスを更新（空オプションなし）
+  elements.presetSelect.innerHTML = '';
   
-  Object.entries(presets).forEach(([id, preset]) => {
+  const presetEntries = Object.entries(presets);
+  
+  // プリセットがない場合のみプレースホルダーを表示
+  if (presetEntries.length === 0) {
     const option = document.createElement('option');
-    option.value = id;
-    option.textContent = preset.name;
+    option.value = '';
+    option.textContent = '-- プリセットなし --';
     elements.presetSelect.appendChild(option);
-  });
+  } else {
+    // プリセットを追加
+    presetEntries.forEach(([id, preset]) => {
+      const option = document.createElement('option');
+      option.value = id;
+      option.textContent = preset.name;
+      elements.presetSelect.appendChild(option);
+    });
+    
+    // 最初のオプションを選択
+    elements.presetSelect.selectedIndex = 0;
+  }
   
   updateButtonStates();
 }
